@@ -6,9 +6,9 @@ const moment = require('moment')
 
 router.post('/start/:text', async function(req,res){
     try {
-     let data = req.params.text
+     let params = req.params.text
       cron.schedule('*/7 * * * * * ', function(){
-          console.log(data,moment().format("YYYY-MM-DD-HH:mm:ss"))
+          console.log({"text": params,"dateTime":moment().format("YYYY-MM-DD-HH:mm:ss")})
       })
       res.status(200).send({message:"Running"})
     } catch (error) {
