@@ -9,7 +9,7 @@
 + The scheduler must schedule the event to trigger a function at the date time mentioned in the event body.
 + The trigger function (API) must accept the text as input, sleep for the duration of text length and return textbackwards.
 
-### Example
+# Example
 
 Let say list of events is
 [
